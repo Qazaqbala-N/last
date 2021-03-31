@@ -1,0 +1,6 @@
+s=input()
+s2=input()
+s=set(s)
+s2=set(s2)
+print(s)
+print(s.)
