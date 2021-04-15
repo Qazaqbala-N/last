@@ -5,10 +5,10 @@ from .models import Product, Category
 
 
 def product_list(request):
-    products= Product.objects.all()
+    products = Product.objects.all()
     products_json = [product.to_json() for product in products]
     print(products_json)
-    return JsonResponse(products, safe=False)
+    return JsonResponse(products_json, safe=False)
 
 
 def product_detail(request, product_id):
@@ -21,7 +21,7 @@ def product_detail(request, product_id):
 def category_list(request):
     categories = Category.objects.all()
     categories_json = [category.to_json() for category in categories]
-    return JsonResponse(categories, safe=False)
+    return JsonResponse(categories_json, safe=False)
 
 
 def category_detail(request, category_id):
